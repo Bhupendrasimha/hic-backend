@@ -1,9 +1,11 @@
+//POST API
 const express = require("express")
-const { route } = require("express/lib/application")
+
 const AddLink = require("../controllers/addLink")
+const checkIfAuthenticated  = require("../middleware/auth")
 
 const router = express.Router()
 
-router.post("/addData", AddLink)
+router.post("/addData",checkIfAuthenticated, AddLink)
 
 module.exports = router
