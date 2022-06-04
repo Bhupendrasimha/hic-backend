@@ -1,12 +1,14 @@
 
 const mongoose = require("mongoose");
-
+// SCHEMA MODAL
+//TODO: NEED TO SEGREGATE BASED ON USER DATA
 const Schema = mongoose.Schema;
 
 const addLinkSchema = new Schema({
     addURL: {
         type: String,
         required: true,
+        //TODO:ADD UNIQUEIDS
         // unique :true,
 
     },
