@@ -1,3 +1,5 @@
+//MONGO DB INTEGRATION
+
 const mongoose = require("mongoose")
 
 const connectDB = async () => {
