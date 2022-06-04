@@ -1,5 +1,6 @@
 const AddLink = require("../models/AddLinkSchema")
 
+//GET DATA BASED ON USER NEED TO CHANGE THE DATA BASE LOGIC TO CHANGE AS USER VALUES
 const getLinksData = async (req, res) => {
 
     if (req.query.page) {

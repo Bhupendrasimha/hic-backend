@@ -2,15 +2,13 @@ const mongoose = require("mongoose")
 const AddLink = require("../models/AddLinkSchema")
 const { LogoScrape } = require('logo-scrape')
 
+//POST THE DATA IN MEANS LINKS
+
 const addUrlToDataBase = async (req, res) => {
     console.log(req.body)
+    //TODO SEGERATE WITH CATEGORIES
     try {
         const { addURL, description, category, createdAt } = req.body;
-
-        // const url= await AddLink.findOne(addURL)
-        // if(url){
-        //     return res.status(404).json("URL already exists")
-        // }
         let logo = await LogoScrape.getLogo(addURL)
         console.log(logo)
 
